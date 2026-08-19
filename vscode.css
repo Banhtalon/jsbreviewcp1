@@ -1,0 +1,199 @@
+/* VS Code Dark+ inspired code theme.
+   Kept local so code stays readable even if the external highlight.js theme fails. */
+
+:root {
+  --vscode-editor: #1e1e1e;
+  --vscode-editor-deep: #181818;
+  --vscode-border: #333333;
+  --vscode-text: #d4d4d4;
+  --vscode-muted: #9da5b4;
+  --vscode-selection: #264f78;
+}
+
+.code-lab {
+  background: var(--vscode-editor) !important;
+  border-color: var(--vscode-border) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .16);
+}
+
+.code-toolbar {
+  background: var(--vscode-editor-deep) !important;
+  border-bottom-color: var(--vscode-border) !important;
+  color: #cccccc !important;
+}
+
+.code-meta small {
+  color: #c8d3e2;
+}
+
+.lang-pill {
+  color: #9cdcfe;
+}
+
+.code-action,
+.viewport-tools button {
+  background: #252526 !important;
+  border-color: #3f3f46 !important;
+  color: #f0f0f0 !important;
+}
+
+.code-action:hover,
+.viewport-tools button:hover {
+  background: #2d2d30 !important;
+  border-color: #5a5d63 !important;
+}
+
+.run-btn {
+  background: #6b2f20 !important;
+  border-color: #a64b32 !important;
+  color: #ffd7c8 !important;
+}
+
+.run-btn:hover {
+  background: #7c3826 !important;
+}
+
+/* Critical fallback: never allow dark page text to be inherited by a dark code editor. */
+.code-lab pre,
+.code-lab pre code,
+.code-lab .hljs {
+  background: var(--vscode-editor) !important;
+  color: var(--vscode-text) !important;
+  text-shadow: none !important;
+}
+
+.code-lab pre {
+  padding: 22px 24px !important;
+  font-family: "Cascadia Code", "Cascadia Mono", "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace !important;
+  font-size: 14px !important;
+  line-height: 1.72 !important;
+  tab-size: 2;
+  caret-color: #ffffff;
+  scrollbar-color: #424242 var(--vscode-editor);
+}
+
+.code-lab pre code {
+  display: block;
+  min-width: max-content;
+  font: inherit !important;
+  letter-spacing: 0;
+}
+
+.code-lab pre::selection,
+.code-lab pre code::selection,
+.code-lab pre code *::selection {
+  background: var(--vscode-selection);
+  color: #ffffff;
+}
+
+/* Plain text / ASCII diagrams still need strong contrast. */
+.code-lab code.language-text,
+.code-lab code.language-plaintext,
+.code-lab code.language-txt {
+  color: #d4d4d4 !important;
+}
+
+/* VS Code Dark+ token palette for highlight.js. */
+.code-lab .hljs-comment,
+.code-lab .hljs-quote {
+  color: #6a9955 !important;
+  font-style: italic;
+}
+
+.code-lab .hljs-keyword,
+.code-lab .hljs-selector-pseudo,
+.code-lab .hljs-template-tag {
+  color: #c586c0 !important;
+}
+
+.code-lab .hljs-name,
+.code-lab .hljs-selector-tag,
+.code-lab .hljs-tag .hljs-name {
+  color: #569cd6 !important;
+}
+
+.code-lab .hljs-tag {
+  color: #808080 !important;
+}
+
+.code-lab .hljs-attr,
+.code-lab .hljs-attribute,
+.code-lab .hljs-property,
+.code-lab .hljs-selector-class,
+.code-lab .hljs-selector-id {
+  color: #9cdcfe !important;
+}
+
+.code-lab .hljs-string,
+.code-lab .hljs-regexp,
+.code-lab .hljs-addition {
+  color: #ce9178 !important;
+}
+
+.code-lab .hljs-number,
+.code-lab .hljs-literal {
+  color: #b5cea8 !important;
+}
+
+.code-lab .hljs-built_in,
+.code-lab .hljs-type,
+.code-lab .hljs-class .hljs-title {
+  color: #4ec9b0 !important;
+}
+
+.code-lab .hljs-title,
+.code-lab .hljs-title.function_,
+.code-lab .hljs-section {
+  color: #dcdcaa !important;
+}
+
+.code-lab .hljs-variable,
+.code-lab .hljs-template-variable,
+.code-lab .hljs-symbol,
+.code-lab .hljs-params {
+  color: #9cdcfe !important;
+}
+
+.code-lab .hljs-meta,
+.code-lab .hljs-doctag {
+  color: #569cd6 !important;
+}
+
+.code-lab .hljs-deletion {
+  color: #f44747 !important;
+}
+
+.code-lab .hljs-punctuation,
+.code-lab .hljs-operator {
+  color: #d4d4d4 !important;
+}
+
+.code-lab .hljs-emphasis {
+  font-style: italic;
+}
+
+.code-lab .hljs-strong {
+  font-weight: 700;
+}
+
+/* Output area visually separated from the editor, like VS Code's panel. */
+.output-panel {
+  background: #181818 !important;
+  border-top-color: var(--vscode-border) !important;
+}
+
+.output-toolbar {
+  color: var(--vscode-muted) !important;
+  background: #181818;
+}
+
+.frame-stage {
+  background: #252526 !important;
+}
+
+@media (max-width: 800px) {
+  .code-lab pre {
+    padding: 18px !important;
+    font-size: 12.5px !important;
+  }
+}
