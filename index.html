@@ -1,74 +1,73 @@
 <!DOCTYPE html>
-
 <html lang="vi">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="light dark" name="color-scheme"/>
-<title>JSB Buổi 1–5 — Ôn tập &amp; Thực hành</title>
-<link href="./styles.css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Website ôn tập tương tác JSB Buổi 1–5: HTML, CSS, Position, Flexbox và Responsive.">
+  <title>JSB Buổi 1–5 — Ôn tập & Thực hành</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/styles/github-dark-dimmed.min.css">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<div aria-hidden="true" class="scroll-progress"><span></span></div>
-<header class="mobile-bar">
-<button aria-label="Mở mục lục" class="plain-btn" id="menuToggle" type="button">Mục lục</button>
-<strong>JSB 01—05</strong>
-<button class="plain-btn" id="themeToggleMobile" type="button">Giao diện</button>
-</header>
-<aside class="sidebar" id="sidebar">
-<div class="brand-block">
-<div class="brand-kicker">WEB DEVELOPER BASIC</div>
-<a class="brand-mark" href="#top"><span>JSB</span><b>01—05</b></a>
-<p>Kiến thức ôn tập &amp; thực hành</p>
-</div>
-<div class="search-box">
-<label for="siteSearch">Tìm nhanh trong tài liệu</label>
-<div class="search-row"><input id="siteSearch" placeholder="Ví dụ: Flexbox, position…" type="search"/><button id="searchBtn" type="button">Tìm</button></div>
-<small>Phím <kbd>/</kbd> để tìm nhanh</small>
-</div>
-<nav aria-label="Mục lục khóa học" class="course-nav">
-<a data-nav="chapter-1-tổng-quan-kiến-thức-buổi-15" href="#chapter-1-tổng-quan-kiến-thức-buổi-15"><span>01</span><b>Tổng quan kiến thức Buổi 1–5</b></a><a data-nav="chapter-2-buổi-1-website-và-html-cơ-bản" href="#chapter-2-buổi-1-website-và-html-cơ-bản"><span>02</span><b>Buổi 1 – Website và HTML cơ bản</b></a><a data-nav="chapter-3-buổi-2-html-bậc-trung-và-website-nhiều-trang" href="#chapter-3-buổi-2-html-bậc-trung-và-website-nhiều-trang"><span>03</span><b>Buổi 2 – HTML bậc trung và website nhiều trang</b></a><a data-nav="chapter-4-buổi-3-css-selector-devtools-và-box-model" href="#chapter-4-buổi-3-css-selector-devtools-và-box-model"><span>04</span><b>Buổi 3 – CSS, Selector, DevTools và Box Model</b></a><a data-nav="chapter-5-buổi-4-cascade-kế-thừa-và-position" href="#chapter-5-buổi-4-cascade-kế-thừa-và-position"><span>05</span><b>Buổi 4 – Cascade, kế thừa và Position</b></a><a data-nav="chapter-6-buổi-5-display-responsive-và-flexbox" href="#chapter-6-buổi-5-display-responsive-và-flexbox"><span>06</span><b>Buổi 5 – Display, Responsive và Flexbox</b></a><a data-nav="chapter-7-mini-project-tổng-hợp" href="#chapter-7-mini-project-tổng-hợp"><span>07</span><b>Mini-project tổng hợp</b></a><a data-nav="chapter-8-bài-tập-thực-hành-theo-cấp-độ" href="#chapter-8-bài-tập-thực-hành-theo-cấp-độ"><span>08</span><b>Bài tập thực hành theo cấp độ</b></a><a data-nav="chapter-9-checklist-debug" href="#chapter-9-checklist-debug"><span>09</span><b>Checklist debug</b></a><a data-nav="chapter-10-bảng-ghi-nhớ-nhanh" href="#chapter-10-bảng-ghi-nhớ-nhanh"><span>10</span><b>Bảng ghi nhớ nhanh</b></a><a data-nav="chapter-11-câu-hỏi-tự-ôn" href="#chapter-11-câu-hỏi-tự-ôn"><span>11</span><b>Câu hỏi tự ôn</b></a><a data-nav="chapter-12-kế-hoạch-ôn-tập-đề-xuất" href="#chapter-12-kế-hoạch-ôn-tập-đề-xuất"><span>12</span><b>Kế hoạch ôn tập đề xuất</b></a><a data-nav="chapter-13-checklist-hoàn-thành-cuối-cùng" href="#chapter-13-checklist-hoàn-thành-cuối-cùng"><span>13</span><b>Checklist hoàn thành cuối cùng</b></a>
-</nav>
-<div class="sidebar-footer">
-<div class="read-progress"><span>Tiến độ đọc</span><strong id="readPercent">0%</strong></div>
-<div class="mini-progress"><i id="readBar"></i></div>
-<button class="theme-btn" id="themeToggle" type="button">Đổi sáng / tối</button>
-</div>
-</aside>
-<div class="sidebar-scrim" id="sidebarScrim"></div>
-<main id="top">
-<section class="course-hero">
-<div aria-hidden="true" class="hero-gridline"></div>
-<div class="hero-copy">
-<div class="eyebrow"><span class="pulse-dot"></span> MindX · JSB Revision</div>
-<h1>Học HTML/CSS bằng cách <em>nhìn thấy kết quả.</em></h1>
-<p class="hero-lead">Bản học tập tương tác cho Buổi 1–5: đọc kiến thức, xem code, chạy output ngay tại chỗ, luyện mini-project và tự debug.</p>
-<div class="hero-actions">
-<a class="primary-cta" href="#chapter-1-tổng-quan-kiến-thức-buổi-15">Bắt đầu ôn tập</a>
-<a class="secondary-cta" href="#chapter-7-mini-project-tổng-hợp">Xem Mini-project</a>
-</div>
-</div>
-<div aria-label="Thống kê tài liệu" class="hero-panel">
-<div class="metric metric-wide"><small>COURSE MAP</small><strong>01 → 05</strong><span>HTML cơ bản · Semantic · CSS · Position · Flexbox &amp; Responsive</span></div>
-<div class="metric"><small>CHỦ ĐỀ</small><strong>120</strong><span>mục kiến thức</span></div>
-<div class="metric"><small>CODE LAB</small><strong>198</strong><span>ví dụ có thể đọc / chạy</span></div>
-<div class="metric metric-accent"><small>MỤC TIÊU</small><strong>Responsive</strong><span>Tự dựng website HTML/CSS cơ bản</span></div>
-</div>
-</section>
-<section class="quick-guide">
-<div><span>01</span><h2>Đọc</h2><p>Đi theo từng buổi, phần cốt lõi và phần mở rộng được phân biệt rõ.</p></div>
-<div><span>02</span><h2>Chạy</h2><p>Với block HTML/CSS, nhấn <b>Chạy ví dụ</b> để xem output ngay bên dưới.</p></div>
-<div><span>03</span><h2>Thử</h2><p>Đổi viewport Mobile / Tablet / Desktop để quan sát responsive.</p></div>
-<div><span>04</span><h2>Làm</h2><p>Hoàn thành bài tập, mini-project, checklist debug và câu hỏi tự ôn.</p></div>
-</section>
-<div class="document-shell" id="documentContent"><div class="content-loading">Đang tải nội dung bài học…</div></div>
-<footer class="site-footer">
-<div><strong>JSB 01—05</strong><p>Ôn tập · Thực hành · Nhìn thấy Output</p></div>
-<a href="#top">Về đầu trang ↑</a>
-</footer>
-</main>
-<button aria-label="Về đầu trang" class="back-top" id="backTop" type="button">↑</button>
-<div aria-live="polite" class="toast" id="toast" role="status"></div>
-<script src="./loader.js"></script>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <header class="mobile-bar">
+    <button id="menuToggle" class="icon-btn" type="button" aria-label="Mở mục lục">☰</button>
+    <strong>JSB 01—05</strong>
+    <button id="themeToggleMobile" class="icon-btn" type="button" aria-label="Đổi giao diện">◐</button>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <small>WEB DEVELOPER BASIC</small>
+      <a href="#top"><strong>JSB</strong><span>01—05</span></a>
+      <p>Kiến thức ôn tập & thực hành</p>
+    </div>
+    <div class="search-box">
+      <label for="siteSearch">Tìm nhanh</label>
+      <div><input id="siteSearch" type="search" placeholder="Flexbox, position…"><button id="searchBtn" type="button">Tìm</button></div>
+      <small>Nhấn <kbd>/</kbd> để tìm</small>
+    </div>
+    <nav id="courseNav" class="course-nav" aria-label="Mục lục khóa học"></nav>
+    <div class="sidebar-footer">
+      <div><span>Tiến độ đọc</span><strong id="readPercent">0%</strong></div>
+      <div class="mini-progress"><i id="readBar"></i></div>
+      <button id="themeToggle" type="button">Đổi sáng / tối</button>
+    </div>
+  </aside>
+  <div id="sidebarScrim" class="sidebar-scrim"></div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> MINDX · JSB REVISION</p>
+        <h1>Học HTML/CSS bằng cách <em>nhìn thấy kết quả.</em></h1>
+        <p class="lead">Đọc kiến thức, xem code, chạy Output ngay tại chỗ, luyện mini-project và tự debug — toàn bộ phạm vi Buổi 1–5.</p>
+        <div class="hero-actions"><a href="#course">Bắt đầu ôn tập</a><a href="#chapter-7-mini-project-tong-hop" class="ghost">Mini-project</a></div>
+      </div>
+      <div class="stats">
+        <article class="wide"><small>COURSE MAP</small><strong>01 → 05</strong><p>HTML · Semantic · CSS · Position · Flexbox & Responsive</p></article>
+        <article><small>CHỦ ĐỀ</small><strong>120</strong><p>mục kiến thức</p></article>
+        <article><small>CODE LAB</small><strong>198</strong><p>ví dụ code</p></article>
+        <article class="accent"><small>MỤC TIÊU</small><strong>Responsive</strong><p>Tự dựng website HTML/CSS</p></article>
+      </div>
+    </section>
+
+    <section class="quick-guide">
+      <article><b>01</b><h2>Đọc</h2><p>Đi theo từng buổi, từ HTML cơ bản đến Flexbox.</p></article>
+      <article><b>02</b><h2>Chạy</h2><p>Nhấn “Chạy ví dụ” để xem Output ngay bên dưới.</p></article>
+      <article><b>03</b><h2>Thử</h2><p>Đổi Mobile / Tablet / Desktop trong khung preview.</p></article>
+      <article><b>04</b><h2>Làm</h2><p>Hoàn thành mini-project, bài tập và checklist debug.</p></article>
+    </section>
+
+    <div id="course" class="document-shell"><div class="loading">Đang tải tài liệu JSB…</div></div>
+    <footer><div><strong>JSB 01—05</strong><p>Ôn tập · Thực hành · Nhìn thấy Output</p></div><a href="#top">Về đầu trang ↑</a></footer>
+  </main>
+
+  <button id="backTop" class="back-top" type="button" aria-label="Về đầu trang">↑</button>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/marked@14.1.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.10.0/lib/common.min.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
